@@ -39,6 +39,7 @@ def get_price():
     price_data = fetch_crop_price(crop_name, state)
     return jsonify(price_data)
 
-if __name__ != '__main__':
-    from waitress import serve
+from waitress import serve
+
+if __name__ == '__main__':
     serve(app, host="0.0.0.0", port=5000)
