@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import requests
 
 # SerpAPI key (Replace with your actual API key)
@@ -6,6 +7,7 @@ API_KEY = "12a0690a23d8d09af0c65223f0da3def0791295378c4e7897c0cfe5d6ba1bda2"
 
 app = Flask(__name__)
 
+CORS(app)
 # Function to fetch crop price
 def fetch_crop_price(crop_name, state):
     params = {
@@ -38,7 +40,7 @@ def get_price():
     
     price_data = fetch_crop_price(crop_name, state)
     return jsonify(price_data)
-
+    return {"message" : "CORS is enabled"}
 from waitress import serve
 
 if __name__ == '__main__':
