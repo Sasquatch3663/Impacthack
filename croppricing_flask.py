@@ -3,7 +3,7 @@ from flask_cors import CORS
 import requests
 
 # SerpAPI key (Replace with your actual API key)
-API_KEY = "12a0690a23d8d09af0c65223f0da3def0791295378c4e7897c0cfe5d6ba1bda2"
+API_KEY = "30895d28ad8c06e61997f64a5b7a7c32f117e15dba79d4bed63662cb6a882f8c"
 
 app = Flask(__name__)
 
